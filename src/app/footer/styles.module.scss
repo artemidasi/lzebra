@@ -1,0 +1,39 @@
+.footer {
+  position: sticky;
+
+  padding: 28px 0;
+
+  background-color: $white-color;
+
+  bottom: 0;
+
+  z-index: 100;
+}
+
+.row {
+  display: flex;
+
+  align-items: center;
+}
+
+.content {
+  display: flex;
+
+  justify-content: space-between;
+}
+
+.icon {
+  margin-right: 7px;
+}
+
+.text {
+  color: $gray-medium-color;
+}
+
+.company {
+  margin: 0 7px;
+}
+
+.select {
+  color: #e98b84 !important;
+}

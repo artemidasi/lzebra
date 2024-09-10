@@ -1,0 +1,40 @@
+.title {
+  padding: 0;
+  margin: 0;
+
+  font-family: $font-name;
+  color: $black-color;
+  line-height: 1.3;
+
+  &_italic {
+    font-style: italic;
+  }
+
+  &_uppercase {
+    text-transform: uppercase;
+  }
+
+  &_h1 {
+    @include fluid-type($font-size-h1);
+  }
+
+  &_h2 {
+    @include fluid-type($font-size-h2);
+  }
+
+  &_h3 {
+    @include fluid-type($font-size-h3);
+  }
+  
+  &_h4 {
+    @include fluid-type($font-size-h4);
+  }
+
+  &_h5 {
+    @include fluid-type($font-size-h5);
+  }
+
+  &_h6 {
+    font-size: $font-size-h6;
+  }
+}

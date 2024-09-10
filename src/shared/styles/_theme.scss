@@ -1,0 +1,80 @@
+@use 'sass:math';
+
+$white-color: white;
+$black-color: #191919;
+
+$gray-light-color: #f5f5f5;
+$gray-medium-color: #a2a2a2;
+
+$font-size-h6: 14px;
+$font-size-h5: 16px;
+$font-size-h4: 20px;
+$font-size-h3: 28px;
+$font-size-h2: 36px;
+$font-size-h1: 210px;
+
+$border-radius-xs: 4px;
+$border-radius-s: 6px;
+$border-radius-l: 12px;
+$border-radius-xl: 20px;
+
+$font-name: 'Montserrat';
+
+$font-family: $font-name, sans-serif;
+
+$border-gray: 1px solid $gray-light-color;
+
+$font-weight-light: 300;
+$font-weight-medium: 400;
+$font-weight-light-bold: 500;
+$font-weight-semi-bold: 600;
+$font-weight-bold: 700;
+
+$mobile-s: 320px;
+$mobile-m: 375px;
+$mobile-l: 425px;
+$tablet: 750px;
+$desktop: 1200px;
+$desktop-l: 1440px;
+
+@function get-vw($target) { 
+  $vw-context: (1000*0.01) * 1px;
+  
+  @return ($target/$vw-context) * 1vw;
+}
+
+@mixin dynamic-width($max-width) {
+  width: 100%;
+  max-width: calc($max-width * var(--power, 1));
+}
+
+@function strip-unit($value) {
+  @return $value / ($value * 0 + 1);
+}
+
+$min-width: 320px;
+$max-width: 1920px;
+
+@mixin fluid-type($max-font-size) {
+  $u1-value: unit($min-width);
+  $u2-value: unit($max-width);
+  $u3-value: unit($font-size-h6);
+  $u4-value: unit($max-font-size);
+
+  @if $u1-value ==
+    $u2-value and
+    $u1-value ==
+    $u3-value and
+    $u1-value ==
+    $u4-value {
+    font-size: $font-size-h6;
+
+    @media screen and (min-width: $min-width) {
+      font-size: calc(#{$font-size-h6} + #{strip-unit($max-font-size - $font-size-h6)} *
+      ((100vw - #{$min-width}) / #{strip-unit($max-width - $min-width)}));
+    }
+    @media screen and (min-width: $max-width) {
+      font-size: $max-font-size;
+    }
+  }
+}

@@ -1,0 +1,42 @@
+.list {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 26px;
+
+  margin-top: 88px;
+
+  &[data-mobile='true'] {
+    grid-template-columns: 1fr;
+
+    margin-top: 44px;
+  }
+}
+
+.separate {
+  margin: 18px 0;
+
+  padding: 0;
+  height: 0;
+
+  border-top: $border-gray;
+}
+
+.item {
+  &Description {
+    max-width: 300px;
+  }
+
+  &Image {
+    width: 176px;
+    
+    aspect-ratio: 1 / 1;
+
+    margin-bottom: 66px;
+
+    &[data-mobile='true'] {
+      margin-bottom: 30px;
+    }
+  }
+}

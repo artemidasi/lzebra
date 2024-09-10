@@ -1,0 +1,22 @@
+.section {
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+
+.top {
+  display: flex;
+
+  justify-content: space-between;
+
+  margin-bottom: 58px;
+}
+
+.title {
+  line-height: 1;
+}
+
+.description {
+  text-align: end;
+
+  max-width: 470px;
+}

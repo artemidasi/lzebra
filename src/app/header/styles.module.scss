@@ -1,0 +1,21 @@
+.header {
+  position: sticky;
+
+  background-color: $white-color;
+
+  top: 0;
+
+  z-index: 100;
+}
+
+.content {
+  padding-top: 16px;
+  padding-bottom: 16px;
+
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+  
+  border-bottom: $border-gray;
+}

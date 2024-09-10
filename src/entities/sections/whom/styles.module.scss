@@ -1,0 +1,35 @@
+.section {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+
+  padding-top: 18px;
+  padding-bottom: 18px;
+
+  border-bottom: $border-gray;
+
+  &[data-mobile='true'] {
+    display: grid;
+
+    gap: 10px;
+
+    align-items: flex-start;
+  }
+}
+
+.text {
+  color: $gray-medium-color;
+}
+
+.left {
+  display: flex;
+  
+  align-items: center;
+}
+
+.icon {
+  color: $gray-medium-color;
+
+  margin-left: 14px;
+}
