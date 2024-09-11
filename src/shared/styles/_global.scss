@@ -6,10 +6,6 @@
   --gray-medium-color: #{$gray-medium-color};
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
   font-family: $font-name;
   font-weight: $font-weight-medium;

@@ -19,7 +19,7 @@ const Header: React.FC = () => {
 
   const handleGoContacts = contextSafe(() => {
     gsap.to(window, {
-      duration: 2,
+      duration: 6,
       scrollTo: '#contacts',
     });
 
