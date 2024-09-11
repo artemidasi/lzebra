@@ -1,14 +1,13 @@
 import * as React from 'react';
 
+import { useGSAP } from '@gsap/react';
+import { gsap } from 'gsap';
+
 import imageSrc from 'public/images/digital-investigations.png';
 import imageMobileSrc from 'public/images/digital-investigations-mobile.png';
 
-import { gsap } from 'gsap';
-
 import { useIsMobile } from 'shared/hooks';
 import { Image, Title, Wrapper } from 'shared/ui-kit';
-
-import { useGSAP } from '@gsap/react';
 
 import styles from './styles.module.scss';
 
@@ -27,10 +26,10 @@ const DigitalInvestigationsSection: React.FC = () => {
         scrollTrigger: {
           trigger: sectionRef.current,
           start: 'top +=100',
-        }
-      })
+        },
+      });
     }
-  })
+  });
 
   return (
     <section ref={sectionRef} data-mobile={isMobile} className={styles.section}>
@@ -50,16 +49,16 @@ const DigitalInvestigationsSection: React.FC = () => {
             </Title>
 
             <div data-mobile={isMobile} className={styles.lists}>
-              <Title variant="h4" family='Golos Text' className={styles.text}>
+              <Title variant="h4" family="Golos Text" className={styles.text}>
                 Иногда отчеты не сходятся из-за ошибок в первичных данных.
                 Эль-Зебра помнит все связи. Вы легко сможете провести
                 расследование и отследить путь к источнику данных
               </Title>
 
-              <Title variant="h4" family='Golos Text' className={styles.text}>
+              <Title variant="h4" family="Golos Text" className={styles.text}>
                 Поможет найти и разрешить конфликты, когда в разных документах
-                содержится противоречивая информация. Не пропускайте несостыковки,
-                а разбирайтесь с ними
+                содержится противоречивая информация. Не пропускайте
+                несостыковки, а разбирайтесь с ними
               </Title>
             </div>
           </div>

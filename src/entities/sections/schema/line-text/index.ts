@@ -1,1 +1,1 @@
-export {default} from './line-text';
+export { default } from './line-text';

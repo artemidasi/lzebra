@@ -4,11 +4,11 @@ import cn from 'clsx';
 
 import { useIsMobile } from 'shared/hooks';
 import { Image, Title, Wrapper } from 'shared/ui-kit';
+import { LogicLinesIcon } from 'shared/ui-kit/icons';
 
 import { items } from './const';
 
 import styles from './styles.module.scss';
-import { LogicLinesIcon } from 'shared/ui-kit/icons';
 
 const LogicSection: React.FC = () => {
   const isMobile = useIsMobile();
@@ -17,25 +17,32 @@ const LogicSection: React.FC = () => {
     <section data-mobile={isMobile} className={styles.section}>
       <div data-mobile={isMobile}>
         <Wrapper className={cn(styles.wrapper, styles.grid)}>
-          <div data-mobile={isMobile} className={styles.texts} style={{
-            gridArea: '1 / 2 / 2 / 4'
-          }}>
+          <div
+            data-mobile={isMobile}
+            className={styles.texts}
+            style={{
+              gridArea: '1 / 2 / 2 / 4',
+            }}>
             <Title variant="h2" className={styles.title}>
               Эль-зебра автоматизирует работу с документами и экономит тысячи
               часов
             </Title>
 
-            <Title variant="h4" family='Golos Text' className={styles.description}>
-              ИИ распознает и структурирует данные по объектам и контексту. А после поможет создавать новые отчеты и таблицы. Как хороший помощник – обучится формату ваших документов и заполнитнужными данными
+            <Title
+              variant="h4"
+              family="Golos Text"
+              className={styles.description}>
+              ИИ распознает и структурирует данные по объектам и контексту. А
+              после поможет создавать новые отчеты и таблицы. Как хороший
+              помощник – обучится формату ваших документов и заполнитнужными
+              данными
             </Title>
           </div>
         </Wrapper>
       </div>
 
       <div data-mobile={isMobile} className={styles.grid}>
-        <LogicLinesIcon
-          className={styles.image}
-        />
+        <LogicLinesIcon className={styles.image} />
       </div>
 
       <Wrapper className={styles.wrapper}>
@@ -55,11 +62,11 @@ const LogicSection: React.FC = () => {
                     style={{
                       ...(isMobile
                         ? {
-                          width: maxWidth.mobile,
-                        }
+                            width: maxWidth.mobile,
+                          }
                         : {
-                          width: maxWidth.desktop,
-                        }),
+                            width: maxWidth.desktop,
+                          }),
                     }}
                     src={iconSrc}
                     alt={`${title}-icon`}
@@ -75,7 +82,7 @@ const LogicSection: React.FC = () => {
                     <Title
                       data-mobile={isMobile}
                       variant="h5"
-                      family='Golos Text'
+                      family="Golos Text"
                       className={styles.itemDescription}>
                       {description}
                     </Title>
@@ -92,8 +99,8 @@ const LogicSection: React.FC = () => {
 
                               <Title
                                 variant="h6"
-                                family='Golos Text'
-                                color='gray'
+                                family="Golos Text"
+                                color="gray"
                                 className={styles.formatsTitle}
                                 uppercase>
                                 {title}
@@ -108,7 +115,7 @@ const LogicSection: React.FC = () => {
                   <React.Fragment>
                     <Title
                       variant="h5"
-                      family='Golos Text'
+                      family="Golos Text"
                       className={styles.itemDescription}>
                       {description}
                     </Title>
@@ -122,8 +129,8 @@ const LogicSection: React.FC = () => {
 
                               <Title
                                 variant="h6"
-                                family='Golos Text'
-                                color='gray'
+                                family="Golos Text"
+                                color="gray"
                                 className={styles.formatsTitle}
                                 uppercase>
                                 {title}

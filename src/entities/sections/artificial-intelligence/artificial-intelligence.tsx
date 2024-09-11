@@ -25,14 +25,20 @@ const ArtificialIntelligenceSection: React.FC = () => {
                   <div>
                     {icon}
 
-                    <Title variant="h4" family='Golos Text' className={styles.itemTitle}>
+                    <Title
+                      variant="h4"
+                      family="Golos Text"
+                      className={styles.itemTitle}>
                       {title}
                     </Title>
                   </div>
 
                   <hr data-mobile={isMobile} className={styles.separate} />
 
-                  <Title variant="h4" family='Golos Text' className={styles.itemDescription}>
+                  <Title
+                    variant="h4"
+                    family="Golos Text"
+                    className={styles.itemDescription}>
                     {description}
                   </Title>
                 </li>

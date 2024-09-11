@@ -8,10 +8,10 @@ import ContactsSection from './contacts';
 import DigitalInvestigationsSection from './digital-investigations';
 import IntegrationSection from './integration';
 import LogicSection from './logic';
+import SchemaSection from './schema';
 import SimplificationSection from './simplification';
 import WhomSection from './whom';
 import WorksSection from './works';
-import SchemaSection from './schema'
 
 const Sections: React.FC = () => {
   const isMobile = useIsMobile();

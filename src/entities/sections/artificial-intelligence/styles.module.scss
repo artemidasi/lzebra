@@ -1,9 +1,9 @@
 .section {
   padding-top: 180px;
 
-   &[data-mobile='true'] {
-     padding-top: 58px;
-   }
+  &[data-mobile='true'] {
+    padding-top: 58px;
+  }
 }
 
 .list {

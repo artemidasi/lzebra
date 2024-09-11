@@ -2,10 +2,11 @@ import * as React from 'react';
 
 import { useIsMobile } from 'shared/hooks';
 import { Title } from 'shared/ui-kit';
+import { IntegrationLinesIcon } from 'shared/ui-kit/icons';
+
+import List from './list';
 
 import styles from './styles.module.scss';
-import List from './list';
-import { IntegrationLinesIcon } from 'shared/ui-kit/icons';
 
 const IntegrationSection: React.FC = () => {
   const isMobile = useIsMobile();
@@ -24,7 +25,7 @@ const IntegrationSection: React.FC = () => {
         <IntegrationLinesIcon className={styles.image} />
 
         <div data-mobile={isMobile} className={styles.information}>
-          <Title variant="h4" family='Golos Text' className={styles.title}>
+          <Title variant="h4" family="Golos Text" className={styles.title}>
             Эль-Зебра встраивается не меняя существующие бизнес-процессы.
             Мы занимаемся интеграцией поверх имеющейся инфраструктуры
           </Title>

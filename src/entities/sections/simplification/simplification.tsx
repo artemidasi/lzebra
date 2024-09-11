@@ -1,8 +1,9 @@
 import * as React from 'react';
 
-import Fon from 'public/images/simplification.png';
-
+import { useGSAP } from '@gsap/react';
 import { gsap } from 'gsap';
+
+import Fon from 'public/images/simplification.png';
 
 import { useIsMobile } from 'shared/hooks';
 import { Title, Wrapper } from 'shared/ui-kit';
@@ -10,7 +11,6 @@ import { Title, Wrapper } from 'shared/ui-kit';
 import { firstList, secondList } from './const';
 
 import styles from './styles.module.scss';
-import { useGSAP } from '@gsap/react';
 
 const SimplificationSection: React.FC = () => {
   const isMobile = useIsMobile();
@@ -25,12 +25,12 @@ const SimplificationSection: React.FC = () => {
       scrollTrigger: {
         trigger: sectionRef.current,
         start: 'top +=100',
-      }
-    })
-  })
+      },
+    });
+  });
 
   return (
-    <section ref={sectionRef} id='simplification' className={styles.container}>
+    <section ref={sectionRef} id="simplification" className={styles.container}>
       <Wrapper className={styles.wrapper}>
         <div
           data-mobile={isMobile}
@@ -44,7 +44,7 @@ const SimplificationSection: React.FC = () => {
             </Title>
 
             <div data-mobile={isMobile} className={styles.topDescription}>
-              <Title variant="h6" family='Golos Text' color='gray' uppercase>
+              <Title variant="h6" family="Golos Text" color="gray" uppercase>
                 Open API integration
               </Title>
 
@@ -76,7 +76,7 @@ const SimplificationSection: React.FC = () => {
               {firstList.map((text) => {
                 return (
                   <li key={text} data-mobile={isMobile}>
-                    <Title variant="h5" family='Golos Text'>
+                    <Title variant="h5" family="Golos Text">
                       {text}
                     </Title>
                   </li>
@@ -88,7 +88,7 @@ const SimplificationSection: React.FC = () => {
               {secondList.map((text) => {
                 return (
                   <li key={text} data-mobile={isMobile}>
-                    <Title variant="h5" family='Golos Text'>
+                    <Title variant="h5" family="Golos Text">
                       {text}
                     </Title>
                   </li>

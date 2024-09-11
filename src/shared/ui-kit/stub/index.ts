@@ -1,1 +1,1 @@
-export {default} from './stub';
+export { default } from './stub';

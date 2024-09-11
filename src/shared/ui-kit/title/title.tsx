@@ -59,7 +59,7 @@ const Title: React.FC<React.PropsWithChildren<TitleProps>> = (props) => {
         return 'var(--pink-color)';
       }
     }
-  }
+  };
 
   const CustomTag = `${variant}` as keyof JSX.IntrinsicElements;
 
@@ -73,7 +73,7 @@ const Title: React.FC<React.PropsWithChildren<TitleProps>> = (props) => {
         ...style,
         fontWeight: weight,
         color: getColor(),
-        fontFamily: `${family}, sans-serif`
+        fontFamily: `${family}, sans-serif`,
       }}>
       {children}
     </CustomTag>

@@ -13,7 +13,7 @@ const ContactsSection: React.FC = () => {
   const isMobile = useIsMobile();
 
   return (
-    <section id='contacts' data-mobile={isMobile} className={styles.section}>
+    <section id="contacts" data-mobile={isMobile} className={styles.section}>
       <Wrapper className={styles.wrapper}>
         <Title
           variant="h4"
@@ -30,10 +30,7 @@ const ContactsSection: React.FC = () => {
                 Mail:
               </Title>
 
-              <Title
-                variant="h1"
-                className={styles.text}
-                uppercase>
+              <Title variant="h1" className={styles.text} uppercase>
                 <a href="mailto:hello@LZBRa.com">hello@LZBRa.com</a>
               </Title>
             </div>
@@ -90,10 +87,18 @@ const ContactsSection: React.FC = () => {
         </div>
       </Wrapper>
 
-      <Image src={imageSrc} alt="contacts-image" className={cn(styles.image, 'floating')} />
+      <Image
+        src={imageSrc}
+        alt="contacts-image"
+        className={cn(styles.image, 'floating')}
+      />
 
       <Wrapper>
-        <Title variant="h5" family='Golos Text' color='gray' className={styles.description}>
+        <Title
+          variant="h5"
+          family="Golos Text"
+          color="gray"
+          className={styles.description}>
           Специализируемся на разработке индивидуальных решений, которые легко
           интегрируются с корпоративными процессами. Участвуем в стратегических
           партнерствах с избранными лидерами отрасли для создания инструментов,

@@ -1,12 +1,12 @@
 import * as React from 'react';
 
+import { useGSAP } from '@gsap/react';
+import { gsap } from 'gsap';
+
 import { projectName } from 'shared/const';
 import { useIsMobile } from 'shared/hooks';
 import { Title, Wrapper } from 'shared/ui-kit';
 import { MenuIcon } from 'shared/ui-kit/icons';
-
-import { gsap} from 'gsap';
-import { useGSAP } from '@gsap/react';
 
 import styles from './styles.module.scss';
 
@@ -29,7 +29,7 @@ const Header: React.FC = () => {
       background: '#F8E8E7',
       ease: 'power1.inOut',
     });
-  })
+  });
 
   return (
     <header ref={headerRef} data-mobile={isMobile} className={styles.header}>
@@ -41,7 +41,13 @@ const Header: React.FC = () => {
 
           <MenuIcon />
 
-          <Title onClick={handleGoContacts} variant="h4" weight={400} italic uppercase className={styles.link}>
+          <Title
+            onClick={handleGoContacts}
+            variant="h4"
+            weight={400}
+            italic
+            uppercase
+            className={styles.link}>
             Подключить
           </Title>
         </div>

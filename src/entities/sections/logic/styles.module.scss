@@ -56,9 +56,9 @@
 
   border-top: $border-gray;
 
-   &[data-mobile='true'] {
+  &[data-mobile='true'] {
     justify-content: flex-start;
-   }
+  }
 
   &Image {
     max-width: 100px;

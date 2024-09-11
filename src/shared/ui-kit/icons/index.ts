@@ -1,6 +1,6 @@
-import MenuIcon from './menu';
+import IntegrationLinesIcon from './integration-lines';
 import LogicLinesIcon from './logic-lines';
-import IntegrationLinesIcon from './integration-lines'
-import SchemaIcon from './schema'
+import MenuIcon from './menu';
+import SchemaIcon from './schema';
 
-export { SchemaIcon, LogicLinesIcon, IntegrationLinesIcon, MenuIcon };
+export { IntegrationLinesIcon, LogicLinesIcon, MenuIcon, SchemaIcon };

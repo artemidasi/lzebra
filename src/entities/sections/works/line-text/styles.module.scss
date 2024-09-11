@@ -1,17 +1,17 @@
 .container {
   display: flex;
 
-    align-items: center;
+  align-items: center;
 
-    margin-top: 36px;
+  margin-top: 36px;
     
-    &>:first-child {
-      margin-right: 7px;
-    }
+  &>:first-child {
+    margin-right: 7px;
+  }
 
-    &>:last-child {
-      margin-left: 7px;
-    }
+  &>:last-child {
+    margin-left: 7px;
+  }
 }
 
 .otherText {
@@ -32,7 +32,7 @@
 .text {
   color: $gray-medium-color;
 
-    margin-bottom: 7px;
+  margin-bottom: 7px;
     
-    white-space: nowrap;
+  white-space: nowrap;
 }

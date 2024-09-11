@@ -17,31 +17,60 @@ const Footer: React.FC = () => {
             <MenuIcon />
 
             <div className={styles.company}>
-              <Title variant="h6" family='Golos Text' color='gray' className={styles.text} uppercase>
+              <Title
+                variant="h6"
+                family="Golos Text"
+                color="gray"
+                className={styles.text}
+                uppercase>
                 {projectName}
               </Title>
             </div>
 
             <div className={styles.row}>
-              <Title variant="h6" family='Golos Text' color='gray' className={styles.text} uppercase>
+              <Title
+                variant="h6"
+                family="Golos Text"
+                color="gray"
+                className={styles.text}
+                uppercase>
                 COPY
               </Title>
 
-              <Title variant="h6" family='Golos Text' className={styles.select} uppercase>
+              <Title
+                variant="h6"
+                family="Golos Text"
+                className={styles.select}
+                uppercase>
                 PASTE
               </Title>
 
-              <Title variant="h6" family='Golos Text' color='gray' className={styles.text} uppercase>
+              <Title
+                variant="h6"
+                family="Golos Text"
+                color="gray"
+                className={styles.text}
+                uppercase>
                 RIGHT
               </Title>
 
-              <Title variant="h6" family='Golos Text' color='gray' className={styles.text} uppercase>
+              <Title
+                variant="h6"
+                family="Golos Text"
+                color="gray"
+                className={styles.text}
+                uppercase>
                 &nbsp;{year}
               </Title>
             </div>
           </div>
 
-          <Title variant="h6" family='Golos Text' color='gray' className={styles.text} uppercase>
+          <Title
+            variant="h6"
+            family="Golos Text"
+            color="gray"
+            className={styles.text}
+            uppercase>
             /endpoint
           </Title>
         </div>

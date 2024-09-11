@@ -18,7 +18,10 @@ const BannerSection: React.FC = () => {
             {projectName}
           </Title>
 
-          <Title variant="h4" family='Golos Text' className={styles.description}>
+          <Title
+            variant="h4"
+            family="Golos Text"
+            className={styles.description}>
             Вытащим данные из документов и загрузим в excel / CRM / ERP / базу
             данных
           </Title>

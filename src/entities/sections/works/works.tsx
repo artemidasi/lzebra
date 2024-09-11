@@ -6,9 +6,9 @@ import { useIsMobile } from 'shared/hooks';
 import { Image, Title, Wrapper } from 'shared/ui-kit';
 
 import { items } from './const';
+import LineText from './line-text';
 
 import styles from './styles.module.scss';
-import LineText from './line-text';
 
 const WorksSection: React.FC = () => {
   const isMobile = useIsMobile();
@@ -23,8 +23,8 @@ const WorksSection: React.FC = () => {
             </Title>
 
             <Title variant="h3" className={styles.description} italic>
-              Можно фокусироваться на важном, а не тратить время на перенос данных
-              вручную
+              Можно фокусироваться на важном, а не тратить время на перенос
+              данных вручную
             </Title>
 
             {isMobile ? (
@@ -42,26 +42,41 @@ const WorksSection: React.FC = () => {
             <ul data-mobile={isMobile} className={styles.list}>
               {items.map(({ icon, title, description }) => {
                 return (
-                  <li key={title} data-mobile={isMobile} className={styles.item}>
+                  <li
+                    key={title}
+                    data-mobile={isMobile}
+                    className={styles.item}>
                     {icon}
 
                     {isMobile ? (
                       <div className={styles.itemInfo}>
-                        <Title variant="h4" family='Golos Text' className={styles.itemTitle}>
+                        <Title
+                          variant="h4"
+                          family="Golos Text"
+                          className={styles.itemTitle}>
                           {title}
                         </Title>
 
-                        <Title variant="h4" family='Golos Text' className={styles.itemDescription}>
+                        <Title
+                          variant="h4"
+                          family="Golos Text"
+                          className={styles.itemDescription}>
                           {description}
                         </Title>
                       </div>
                     ) : (
                       <React.Fragment>
-                        <Title variant="h4" family='Golos Text' className={styles.itemTitle}>
+                        <Title
+                          variant="h4"
+                          family="Golos Text"
+                          className={styles.itemTitle}>
                           {title}
                         </Title>
 
-                        <Title variant="h4" family='Golos Text' className={styles.itemDescription}>
+                        <Title
+                          variant="h4"
+                          family="Golos Text"
+                          className={styles.itemDescription}>
                           {description}
                         </Title>
                       </React.Fragment>
@@ -81,9 +96,7 @@ const WorksSection: React.FC = () => {
               />
             ) : null}
 
-            {!isMobile ? (
-              <LineText />
-            ) : null}
+            {!isMobile ? <LineText /> : null}
           </div>
         </div>
       </Wrapper>
