@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 import { useIsMobile } from 'shared/hooks';
-import { Image, Title, Wrapper } from 'shared/ui-kit';
+import { Title, Wrapper } from 'shared/ui-kit';
 
 import { items } from './const';
 
@@ -11,39 +11,37 @@ const ArtificialIntelligenceSection: React.FC = () => {
   const isMobile = useIsMobile();
 
   return (
-    <Wrapper className={styles.wrapper}>
-      <section data-mobile={isMobile} className={styles.section}>
-        <Title variant="h2" uppercase>
-          Обученный искуственный интеллект
-        </Title>
+    <section data-mobile={isMobile} className={styles.section}>
+      <Wrapper className={styles.wrapper}>
+        <div data-mobile={isMobile} className={styles.container}>
+          <Title variant="h2" uppercase>
+            Обученный искуственный интеллект
+          </Title>
 
-        <ul data-mobile={isMobile} className={styles.list}>
-          {items.map(({ title, description, imageSrc }) => {
-            return (
-              <li key={title} data-mobile={isMobile} className={styles.item}>
-                <div>
-                  <Image
-                    src={imageSrc}
-                    alt={title}
-                    className={styles.itemImage}
-                  />
+          <ul data-mobile={isMobile} className={styles.list}>
+            {items.map(({ title, description, icon }) => {
+              return (
+                <li key={title} data-mobile={isMobile} className={styles.item}>
+                  <div>
+                    {icon}
 
-                  <Title variant="h4" className={styles.itemTitle}>
-                    {title}
+                    <Title variant="h4" family='Golos Text' className={styles.itemTitle}>
+                      {title}
+                    </Title>
+                  </div>
+
+                  <hr data-mobile={isMobile} className={styles.separate} />
+
+                  <Title variant="h4" family='Golos Text' className={styles.itemDescription}>
+                    {description}
                   </Title>
-                </div>
-
-                <hr data-mobile={isMobile} className={styles.separate} />
-
-                <Title variant="h4" className={styles.itemDescription}>
-                  {description}
-                </Title>
-              </li>
-            );
-          })}
-        </ul>
-      </section>
-    </Wrapper>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+      </Wrapper>
+    </section>
   );
 };
 

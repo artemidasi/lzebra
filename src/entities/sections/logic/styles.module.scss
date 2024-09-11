@@ -3,6 +3,12 @@
 
   padding-top: 18px;
   padding-bottom: 18px;
+
+  overflow: hidden;
+}
+
+.texts {
+  grid-area: 1 / 2 / 2 / 4;
 }
 
 .title {
@@ -18,10 +24,26 @@
 
 .image {
   margin-left: auto;
+
+  grid-area: 1 / 2 / 2 / 5;
+
   margin-top: 118px;
 
   &[data-mobile='true'] {
     margin-top: 56px;
+    margin-left: 76px;
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr;
+
+  justify-items: flex-end;
+
+  &[data-mobile='true'] {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -33,6 +55,10 @@
   justify-content: space-between;
 
   border-top: $border-gray;
+
+   &[data-mobile='true'] {
+    justify-content: flex-start;
+   }
 
   &Image {
     max-width: 100px;
@@ -86,8 +112,6 @@
   }
 
   &Title {
-    color: $gray-medium-color;
-
     margin-left: 12px;
   }
 }

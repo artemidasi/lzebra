@@ -1,13 +1,10 @@
-.section {
+.container {
   padding-top: 170px;
 
   border-bottom: $border-gray;
 
-  padding-left: 124px;
-
   &[data-mobile='true'] {
     padding-top: 30px;
-    padding-left: 0;
   }
 }
 

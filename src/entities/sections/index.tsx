@@ -11,6 +11,7 @@ import LogicSection from './logic';
 import SimplificationSection from './simplification';
 import WhomSection from './whom';
 import WorksSection from './works';
+import SchemaSection from './schema'
 
 const Sections: React.FC = () => {
   const isMobile = useIsMobile();
@@ -20,6 +21,8 @@ const Sections: React.FC = () => {
       <WhomSection />
 
       {!isMobile ? <BannerSection /> : null}
+
+      <SchemaSection />
 
       <LogicSection />
 

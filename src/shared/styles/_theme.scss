@@ -2,6 +2,7 @@
 
 $white-color: white;
 $black-color: #191919;
+$pink-color: #e98b84;
 
 $gray-light-color: #f5f5f5;
 $gray-medium-color: #a2a2a2;
@@ -77,4 +78,24 @@ $max-width: 1920px;
       font-size: $max-font-size;
     }
   }
+}
+
+@keyframes movebounce {
+  0% {
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+  }
+  50% {
+    -webkit-transform: translateY(20px);
+    transform: translateY(20px);
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+  }
+}
+
+
+%floating {
+  animation: movebounce 5s linear infinite;
 }

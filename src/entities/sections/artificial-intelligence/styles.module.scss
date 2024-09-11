@@ -1,3 +1,11 @@
+.section {
+  padding-top: 180px;
+
+   &[data-mobile='true'] {
+     padding-top: 58px;
+   }
+}
+
 .list {
   display: grid;
 
@@ -28,15 +36,11 @@
     max-width: 300px;
   }
 
-  &Image {
-    width: 176px;
-    
-    aspect-ratio: 1 / 1;
-
-    margin-bottom: 66px;
+  &Title {
+    margin-top: 66px;
 
     &[data-mobile='true'] {
-      margin-bottom: 30px;
+      margin-top: 30px;
     }
   }
 }

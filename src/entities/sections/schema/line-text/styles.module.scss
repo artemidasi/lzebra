@@ -1,0 +1,25 @@
+.container {
+  display: flex;
+
+  align-items: center;
+}
+
+.otherText {
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid $gray-medium-color;
+  line-height: 0.1em;
+  margin: 7px 0 14px;
+
+  span {
+    padding: 0 7px;
+
+    background: $white-color;
+  }
+}
+
+.text {
+  margin-bottom: 7px;
+  
+  white-space: nowrap;
+}

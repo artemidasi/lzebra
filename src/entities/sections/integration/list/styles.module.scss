@@ -1,0 +1,17 @@
+.list {
+  display: grid;
+
+  gap: 20px;
+
+  &[data-mobile='true'] {
+    gap: 10px;
+  }
+}
+
+.text {
+  text-align: end;
+  
+  &[data-mobile='true'] {
+    text-align: start;
+  }
+}

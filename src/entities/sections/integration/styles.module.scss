@@ -23,6 +23,8 @@
 }
 
 .image {
+  margin-left: auto;
+  
   grid-row: 1 / 1;
   grid-column: 1 / 1;
 
@@ -52,28 +54,6 @@
   max-width: 520px;
 
   margin-right: 86px;
-}
-
-.list {
-  display: grid;
-
-  gap: 20px;
-
-  &[data-mobile='true'] {
-    gap: 10px;
-  }
-}
-
-.item {
-  &Title {
-    color: $gray-medium-color;
-
-    text-align: end;
-
-    &[data-mobile='true'] {
-      text-align: start;
-    }
-  }
 }
 
 .fon {

@@ -10,13 +10,13 @@ const WhomSection: React.FC = () => {
   const isMobile = useIsMobile();
 
   return (
-    <div>
-      {isMobile ? <BannerImage /> : null}
+    <div> 
+      {isMobile ? <BannerImage /> : null} 
 
       <Wrapper className={styles.wrapper}>
         <section data-mobile={isMobile} className={styles.section}>
           <div data-mobile={isMobile} className={styles.left}>
-            <Title variant="h5" className={styles.text}>
+            <Title variant="h5" color='gray' className={styles.text}>
               Эль-Зебра / ɛl ˈzɛbrə / El-Zebra
             </Title>
 
@@ -60,7 +60,7 @@ const WhomSection: React.FC = () => {
               данных
             </Title>
           ) : (
-            <Title variant="h5" className={styles.text}>
+            <Title variant="h5" color='gray' className={styles.text}>
               Менеджерам / Бухгалтерам / Аналитикам / Мне
             </Title>
           )}

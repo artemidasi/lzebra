@@ -1,10 +1,9 @@
-.wrapper {
+.container {
   padding: 180px 86px;
+}
 
-  &[data-mobile='true'] {
-    padding: 0;
-    padding-bottom: 58px;
-  }
+.wrapper {
+  padding: 0;
 }
 
 .section {
@@ -43,15 +42,9 @@
   &Description {
     display: flex;
 
-    align-items: center;
-
     color: $gray-medium-color;
 
     margin-right: 30px;
-  }
-
-  &Text {
-    color: $gray-medium-color;
   }
 
   &Icon {

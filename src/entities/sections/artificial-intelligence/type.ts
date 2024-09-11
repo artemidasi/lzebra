@@ -1,5 +1,5 @@
 export interface Item {
-  imageSrc: string;
+  icon: React.ReactNode;
   title: string;
   description: string;
 }

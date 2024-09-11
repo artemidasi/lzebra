@@ -13,6 +13,8 @@ interface TitleProps {
   style?: React.CSSProperties;
 
   weight?: 100 | 200 | 300 | 400 | 500 | 600 | 700;
+  family?: 'Montserrat' | 'Golos Text';
+  color?: 'black' | 'gray' | 'pink';
 
   variant?: TitleVariant;
   onClick?: () => void;
@@ -28,6 +30,8 @@ const Title: React.FC<React.PropsWithChildren<TitleProps>> = (props) => {
     className,
     style = {},
     weight = 400,
+    family = 'Montserrat',
+    color = 'black',
     onClick,
     italic,
     uppercase,
@@ -41,6 +45,22 @@ const Title: React.FC<React.PropsWithChildren<TitleProps>> = (props) => {
     [styles.title_uppercase]: uppercase,
   });
 
+  const getColor = () => {
+    switch (color) {
+      case 'black': {
+        return 'var(--black-color)';
+      }
+
+      case 'gray': {
+        return 'var(--gray-medium-color)';
+      }
+
+      case 'pink': {
+        return 'var(--pink-color)';
+      }
+    }
+  }
+
   const CustomTag = `${variant}` as keyof JSX.IntrinsicElements;
 
   return (
@@ -52,6 +72,8 @@ const Title: React.FC<React.PropsWithChildren<TitleProps>> = (props) => {
       style={{
         ...style,
         fontWeight: weight,
+        color: getColor(),
+        fontFamily: `${family}, sans-serif`
       }}>
       {children}
     </CustomTag>

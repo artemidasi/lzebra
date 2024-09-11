@@ -13,11 +13,15 @@
     "prepare": "husky"
   },
   "dependencies": {
+    "@gsap/react": "^2.1.1",
     "@reactuses/core": "^5.0.21",
+    "body-scroll-lock": "^4.0.0-beta.0",
     "clsx": "^2.1.1",
+    "gsap": "^3.12.5",
     "normalize-scss": "^8.0.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-fast-marquee": "^1.6.5",
     "react-image": "^4.1.0",
     "sass": "^1.78.0"
   },
@@ -25,6 +29,7 @@
     "@eslint/compat": "^1.1.1",
     "@eslint/eslintrc": "^3.1.0",
     "@eslint/js": "^9.9.0",
+    "@types/body-scroll-lock": "^3.1.2",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "@typescript-eslint/eslint-plugin": "^8.4.0",

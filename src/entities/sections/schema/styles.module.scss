@@ -1,0 +1,25 @@
+.container {
+  display: flex;
+
+  padding: 60px 0;
+}
+
+.image {
+  margin-left: auto;
+  
+  &[data-mobile='true'] {
+    margin: 0 20px;
+  }
+}
+
+.lists {
+  display: flex;
+
+  justify-content: space-between;
+}
+
+.list {
+  display: grid;
+
+  gap: 14px;
+}
