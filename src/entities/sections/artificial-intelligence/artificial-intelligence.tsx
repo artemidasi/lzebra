@@ -15,7 +15,7 @@ const ArtificialIntelligenceSection: React.FC = () => {
       <Wrapper className={styles.wrapper}>
         <div data-mobile={isMobile} className={styles.container}>
           <Title variant="h2" uppercase>
-            Преимущства
+            Преимущества
           </Title>
 
           <ul data-mobile={isMobile} className={styles.list}>
