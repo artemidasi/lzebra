@@ -48,11 +48,11 @@
   }
 
   &Icon {
-  margin-left: 380px;
+    margin-left: 380px;
 
-  &[data-mobile='true'] {
-     margin-left: 0;
-  }
+    &[data-mobile='true'] {
+      margin-left: 0;
+    }
   }
 }
 

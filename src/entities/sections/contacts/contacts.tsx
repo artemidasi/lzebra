@@ -1,10 +1,7 @@
 import * as React from 'react';
 
-import { useWindowSize } from '@reactuses/core';
 import cn from 'clsx';
 
-import arrowLeftSrc from 'public/images/arrow-left.png';
-import arrowRightSrc from 'public/images/arrow-right.png';
 import imageSrc from 'public/images/contacts.png';
 
 import { useIsMobile } from 'shared/hooks';
@@ -14,10 +11,6 @@ import styles from './styles.module.scss';
 
 const ContactsSection: React.FC = () => {
   const isMobile = useIsMobile();
-
-  const { width } = useWindowSize();
-
-  const actualWidth = (width * 238) / 1920;
 
   return (
     <section id="contacts" data-mobile={isMobile} className={styles.section}>
@@ -32,15 +25,6 @@ const ContactsSection: React.FC = () => {
 
         <div data-mobile={isMobile} className={styles.rows}>
           <div data-mobile={isMobile} className={cn(styles.row, styles.rowTop)}>
-            <Image
-              style={{
-                width: `${actualWidth}px`,
-              }}
-              className={styles.arrow}
-              src={arrowRightSrc}
-              alt="arrow-right"
-            />
-
             <div
               data-mobile={isMobile}
               className={cn(styles.row, styles.rowText)}>
@@ -52,29 +36,11 @@ const ContactsSection: React.FC = () => {
                 <a href="mailto:hello@LZBRa.com">hello@LZBRa.com</a>
               </Title>
             </div>
-
-            <Image
-              style={{
-                width: `${actualWidth}px`,
-              }}
-              className={styles.arrow}
-              src={arrowLeftSrc}
-              alt="arrow-left"
-            />
           </div>
 
           <div
             data-mobile={isMobile}
             className={cn(styles.row, styles.rowBottom)}>
-            <Image
-              style={{
-                width: `${actualWidth}px`,
-              }}
-              className={styles.arrow}
-              src={arrowRightSrc}
-              alt="arrow-right"
-            />
-
             <div
               data-mobile={isMobile}
               className={cn(styles.row, styles.rowText)}>
@@ -89,15 +55,6 @@ const ContactsSection: React.FC = () => {
                 <a href="tg://resolve?domain=LZBRa">@LZBRa</a>
               </Title>
             </div>
-
-            <Image
-              style={{
-                width: `${actualWidth}px`,
-              }}
-              className={styles.arrow}
-              src={arrowLeftSrc}
-              alt="arrow-left"
-            />
           </div>
         </div>
       </Wrapper>

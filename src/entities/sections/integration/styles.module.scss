@@ -1,14 +1,17 @@
 .wrapper {
+  display: flex;
   position: relative;
 }
 
 .section {
-  display: grid;
+  display: flex;
+  position: relative;
 
   justify-items: flex-end;
 
   padding-top: 78px;
   padding-bottom: 114px;
+  margin-left: auto;
 
   overflow: hidden;
 
@@ -17,22 +20,32 @@
 
     padding-left: 16px;
     padding-top: 39px;
+    margin-left: 0;
 
     flex-direction: column;
   }
 }
 
 .image {
-  margin-left: auto;
-  
-  grid-row: 1 / 1;
-  grid-column: 1 / 1;
+  margin-left: 138px;
 
   z-index: 1;
+
+  &[data-mobile='true'] {
+    margin-left: auto;
+    margin-bottom: 20px;
+  }
 }
 
 .information {
   display: flex;
+  position: absolute;
+
+  top: 0;
+
+  right: 0;
+
+  position: absolute;
 
   grid-row: 1 / 1;
   grid-column: 1 / 1;
@@ -40,8 +53,11 @@
   padding-left: 16px;
   padding-right: 16px;
 
+  padding-top: 78px;
+
   &[data-mobile='true'] {
     display: grid;
+    position: relative;
 
     gap: 20px;
 

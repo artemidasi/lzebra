@@ -16,12 +16,6 @@ const IntegrationSection: React.FC = () => {
       {isMobile ? <div data-mobile={isMobile} className={styles.fon} /> : null}
 
       <section data-mobile={isMobile} className={styles.section}>
-        {/* <Image
-          src={isMobile ? imageMobileSrc : imageSrc}
-          alt="integration"
-          className={styles.image}
-        /> */}
-
         <IntegrationLinesIcon className={styles.image} />
 
         <div data-mobile={isMobile} className={styles.information}>

@@ -10,7 +10,7 @@ import styles from './styles.module.scss';
 const WhomSection: React.FC = () => {
   const isMobile = useIsMobile();
 
-  const { start } = useSpeech({ text: 'Эль-Зебра' });
+  const { start } = useSpeech({ text: 'Эль-Зебра', lang: 'ru' });
 
   return (
     <div>
