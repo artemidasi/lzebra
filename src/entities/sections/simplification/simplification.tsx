@@ -1,8 +1,5 @@
 import * as React from 'react';
 
-import { useGSAP } from '@gsap/react';
-import { gsap } from 'gsap';
-
 import Fon from 'public/images/simplification.png';
 
 import { useIsMobile } from 'shared/hooks';
@@ -16,18 +13,6 @@ const SimplificationSection: React.FC = () => {
   const isMobile = useIsMobile();
 
   const sectionRef = React.useRef<HTMLElement>(null);
-
-  useGSAP(() => {
-    gsap.to(sectionRef.current, {
-      padding: 0,
-      duration: 3,
-      ease: 'power1.inOut',
-      scrollTrigger: {
-        trigger: sectionRef.current,
-        start: 'top +=100',
-      },
-    });
-  });
 
   return (
     <section ref={sectionRef} id="simplification" className={styles.container}>

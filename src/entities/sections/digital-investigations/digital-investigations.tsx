@@ -1,8 +1,5 @@
 import * as React from 'react';
 
-import { useGSAP } from '@gsap/react';
-import { gsap } from 'gsap';
-
 import imageSrc from 'public/images/digital-investigations.png';
 import imageMobileSrc from 'public/images/digital-investigations-mobile.png';
 
@@ -15,21 +12,6 @@ const DigitalInvestigationsSection: React.FC = () => {
   const isMobile = useIsMobile();
 
   const sectionRef = React.useRef<HTMLElement>(null);
-
-  useGSAP(() => {
-    if (!isMobile) {
-      gsap.to(`.${styles.container}`, {
-        paddingLeft: 124,
-        duration: 3,
-        ease: 'power1.inOut',
-        // scrollTrigger: sectionRef.current,
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: 'top +=100',
-        },
-      });
-    }
-  });
 
   return (
     <section ref={sectionRef} data-mobile={isMobile} className={styles.section}>

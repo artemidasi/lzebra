@@ -15,7 +15,7 @@ const SchemaSection: React.FC = () => {
       <Wrapper>
         <div data-mobile={isMobile} className={styles.container}>
           {isMobile ? (
-            <Marquee speed={150}>
+            <Marquee speed={100}>
               <SchemaIcon className={styles.image} />
             </Marquee>
           ) : (

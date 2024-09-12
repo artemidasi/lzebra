@@ -1,8 +1,8 @@
 .section {
-  padding-bottom: 186px;
+  padding: 150px 0;
 
   &[data-mobile='true'] {
-    padding-bottom: 60px;
+    padding: 60px 0;
   }
 }
 
@@ -13,13 +13,8 @@
 
   grid-template-columns: repeat(2, 1fr);
 
-  padding-top: 300px;
-  padding-bottom: 18px;
-
   &[data-mobile='true'] {
     grid-template-columns: 1fr;
-
-    padding-top: 100px;
 
     gap: 30px;
   }
@@ -51,9 +46,6 @@
   width: 100%;
 
   gap: 64px;
-
-  margin-top: auto;
-  margin-bottom: 10px;
 
   &[data-mobile='true'] {
     margin-top: 34px;

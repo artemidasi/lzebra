@@ -1,7 +1,3 @@
-.container {
-  padding: 180px 86px;
-}
-
 .wrapper {
   padding: 0;
 }
@@ -43,8 +39,6 @@
     display: flex;
 
     color: $gray-medium-color;
-
-    margin-right: 30px;
   }
 
   &Icon {
@@ -64,6 +58,8 @@
 
   &[data-mobile='true'] {
     gap: 20px;
+
+    margin-top: 60px;
   }
 }
 

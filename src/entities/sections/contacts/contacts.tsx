@@ -1,7 +1,10 @@
 import * as React from 'react';
 
+import { useWindowSize } from '@reactuses/core';
 import cn from 'clsx';
 
+import arrowLeftSrc from 'public/images/arrow-left.png';
+import arrowRightSrc from 'public/images/arrow-right.png';
 import imageSrc from 'public/images/contacts.png';
 
 import { useIsMobile } from 'shared/hooks';
@@ -11,6 +14,10 @@ import styles from './styles.module.scss';
 
 const ContactsSection: React.FC = () => {
   const isMobile = useIsMobile();
+
+  const { width } = useWindowSize();
+
+  const actualWidth = (width * 238) / 1920;
 
   return (
     <section id="contacts" data-mobile={isMobile} className={styles.section}>
@@ -25,7 +32,18 @@ const ContactsSection: React.FC = () => {
 
         <div data-mobile={isMobile} className={styles.rows}>
           <div data-mobile={isMobile} className={cn(styles.row, styles.rowTop)}>
-            <div data-mobile={isMobile} className={styles.row}>
+            <Image
+              style={{
+                width: `${actualWidth}px`,
+              }}
+              className={styles.arrow}
+              src={arrowRightSrc}
+              alt="arrow-right"
+            />
+
+            <div
+              data-mobile={isMobile}
+              className={cn(styles.row, styles.rowText)}>
               <Title variant="h1" className={styles.text} uppercase>
                 Mail:
               </Title>
@@ -35,43 +53,31 @@ const ContactsSection: React.FC = () => {
               </Title>
             </div>
 
-            {!isMobile ? (
-              <svg
-                data-mobile={isMobile}
-                width="243"
-                height="55"
-                viewBox="0 0 243 55"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M0.837909 27.5004H238.507M238.507 27.5004L213.395 2.38867M238.507 27.5004L213.395 52.6121"
-                  stroke="#191919"
-                  strokeWidth="5"
-                />
-              </svg>
-            ) : null}
+            <Image
+              style={{
+                width: `${actualWidth}px`,
+              }}
+              className={styles.arrow}
+              src={arrowLeftSrc}
+              alt="arrow-left"
+            />
           </div>
 
-          <div data-mobile={isMobile} className={styles.row}>
-            {!isMobile ? (
-              <svg
-                data-mobile={isMobile}
-                width="516"
-                height="55"
-                viewBox="0 0 516 55"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M0 27.5004H511.926M511.926 27.5004L486.814 2.38867M511.926 27.5004L486.814 52.6121"
-                  stroke="#191919"
-                  strokeWidth="5"
-                />
-              </svg>
-            ) : null}
+          <div
+            data-mobile={isMobile}
+            className={cn(styles.row, styles.rowBottom)}>
+            <Image
+              style={{
+                width: `${actualWidth}px`,
+              }}
+              className={styles.arrow}
+              src={arrowRightSrc}
+              alt="arrow-right"
+            />
 
             <div
               data-mobile={isMobile}
-              className={cn(styles.row, styles.rowBottom)}>
+              className={cn(styles.row, styles.rowText)}>
               <Title variant="h1" className={styles.text} uppercase>
                 Telegram:
               </Title>
@@ -83,6 +89,15 @@ const ContactsSection: React.FC = () => {
                 <a href="tg://resolve?domain=LZBRa">@LZBRa</a>
               </Title>
             </div>
+
+            <Image
+              style={{
+                width: `${actualWidth}px`,
+              }}
+              className={styles.arrow}
+              src={arrowLeftSrc}
+              alt="arrow-left"
+            />
           </div>
         </div>
       </Wrapper>

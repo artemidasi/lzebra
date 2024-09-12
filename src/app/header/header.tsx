@@ -19,8 +19,11 @@ const Header: React.FC = () => {
 
   const handleGoContacts = contextSafe(() => {
     gsap.to(window, {
-      duration: 6,
-      scrollTo: '#contacts',
+      duration: 4,
+      scrollTo: {
+        y: '#contacts',
+        autoKill: true,
+      },
     });
 
     gsap.to(headerRef.current, {

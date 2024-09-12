@@ -22,8 +22,8 @@ const BannerSection: React.FC = () => {
             variant="h4"
             family="Golos Text"
             className={styles.description}>
-            Вытащим данные из документов и загрузим в excel / CRM / ERP / базу
-            данных
+            Вытащим данные из документов и загрузим <br /> в excel / CRM / ERP /
+            базу данных
           </Title>
         </div>
 

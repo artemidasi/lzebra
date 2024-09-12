@@ -32,16 +32,15 @@ const LogicSection: React.FC = () => {
               variant="h4"
               family="Golos Text"
               className={styles.description}>
-              ИИ распознает и структурирует данные по объектам и контексту. А
-              после поможет создавать новые отчеты и таблицы. Как хороший
-              помощник – обучится формату ваших документов и заполнитнужными
-              данными
+              Цифровой помощник обучится на ваших документах, извлечет из них
+              данные и перенесет в систему учета / таблицу / маркетинговый отчет
+              / коммерческое предложение
             </Title>
           </div>
         </Wrapper>
       </div>
 
-      <div data-mobile={isMobile} className={styles.grid}>
+      <div data-mobile={isMobile} className={cn(styles.grid, styles.gridIcon)}>
         <LogicLinesIcon className={styles.image} />
       </div>
 
@@ -120,26 +119,24 @@ const LogicSection: React.FC = () => {
                       {description}
                     </Title>
 
-                    <div>
-                      <ul className={styles.formats}>
-                        {files.map(({ icon, title }) => {
-                          return (
-                            <li key={title} className={styles.formatsItem}>
-                              {icon}
+                    <ul className={styles.formats}>
+                      {files.map(({ icon, title }) => {
+                        return (
+                          <li key={title} className={styles.formatsItem}>
+                            {icon}
 
-                              <Title
-                                variant="h6"
-                                family="Golos Text"
-                                color="gray"
-                                className={styles.formatsTitle}
-                                uppercase>
-                                {title}
-                              </Title>
-                            </li>
-                          );
-                        })}
-                      </ul>
-                    </div>
+                            <Title
+                              variant="h6"
+                              family="Golos Text"
+                              color="gray"
+                              className={styles.formatsTitle}
+                              uppercase>
+                              {title}
+                            </Title>
+                          </li>
+                        );
+                      })}
+                    </ul>
                   </React.Fragment>
                 )}
               </li>

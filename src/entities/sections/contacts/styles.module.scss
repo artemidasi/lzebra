@@ -16,6 +16,8 @@
 .rows {
   display: grid;
 
+  justify-content: center;
+
   gap: 5px;
 }
 
@@ -23,11 +25,10 @@
   display: flex;
 
   align-items: center;
+  justify-content: center;
 
-  &Bottom {
-    &[data-mobile='true'] {
-      margin-left: auto;
-    }
+  &Text {
+    margin: 0 10px;
   }
 }
 
@@ -47,4 +48,8 @@
   max-width: 700px;
 
   line-height: 1.7;
+}
+
+.arrow {
+  max-height: 50px;
 }

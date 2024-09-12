@@ -23,8 +23,7 @@ const WorksSection: React.FC = () => {
             </Title>
 
             <Title variant="h3" className={styles.description} italic>
-              Можно фокусироваться на важном, а не тратить время на перенос
-              данных вручную
+              Можно фокусироваться на важном, а не тратить время на рутину
             </Title>
 
             {isMobile ? (
@@ -51,14 +50,14 @@ const WorksSection: React.FC = () => {
                     {isMobile ? (
                       <div className={styles.itemInfo}>
                         <Title
-                          variant="h4"
+                          variant="h5"
                           family="Golos Text"
                           className={styles.itemTitle}>
                           {title}
                         </Title>
 
                         <Title
-                          variant="h4"
+                          variant="h5"
                           family="Golos Text"
                           className={styles.itemDescription}>
                           {description}
@@ -67,14 +66,14 @@ const WorksSection: React.FC = () => {
                     ) : (
                       <React.Fragment>
                         <Title
-                          variant="h4"
+                          variant="h5"
                           family="Golos Text"
                           className={styles.itemTitle}>
                           {title}
                         </Title>
 
                         <Title
-                          variant="h4"
+                          variant="h5"
                           family="Golos Text"
                           className={styles.itemDescription}>
                           {description}
