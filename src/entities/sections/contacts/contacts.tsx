@@ -20,7 +20,7 @@ const ContactsSection: React.FC = () => {
           className={styles.title}
           italic={!isMobile}
           uppercase>
-          Сважитесь с нами, чтобы обсудить внедрение
+          Свяжитесь с нами, чтобы обсудить внедрение
         </Title>
 
         <div data-mobile={isMobile} className={styles.rows}>
